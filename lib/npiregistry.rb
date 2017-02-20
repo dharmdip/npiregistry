@@ -1,5 +1,12 @@
-require "npiregistry/version"
+require 'npiregistry/version'
+require 'npiregistry/request'
 
 module Npiregistry
-  # Your code goes here...
+
+  def self.get(options={})
+    Request.execute(options: options)
+  end
+
 end
+
+
