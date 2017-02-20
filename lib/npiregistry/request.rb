@@ -1,5 +1,6 @@
-require 'addressable/uri'
+require 'net/http'
 require 'json'
+require 'addressable/uri'
 require 'ostruct'
 
 module Npiregistry
@@ -43,7 +44,7 @@ module Npiregistry
     end
 
     def make_request
-      JSON.parse(Net::HTTP.get(URI("#{@url}?#{prepare_params}")))
+      JSON.parse(::Net::HTTP.get(URI("#{@url}?#{prepare_params}")))
     end
 
     def prepare_params
