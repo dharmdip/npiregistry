@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A Ruby interface to the NPI registry API | Read Only (https://npiregistry.cms.hhs.gov/).}
   spec.description   = %q{For more details please review https://npiregistry.cms.hhs.gov/registry/help-api}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/dharmdip/npiregistry"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
