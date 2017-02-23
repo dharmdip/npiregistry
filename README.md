@@ -1,6 +1,6 @@
 # Npiregistry
 
-A Ruby interface to the NPI registry API | Read Only (https://npiregistry.cms.hhs.gov/
+A Ruby interface to the NPI registry API | Read Only (https://npiregistry.cms.hhs.gov)
 
 ## Installation
 
