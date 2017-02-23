@@ -22,7 +22,52 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Test cases and few conditions code need to add.
+Get details using valid NPI number
+
+```ruby
+Npiregistry.get({number: 1245319599})
+```
+
+Get details using first name and wildcard search 
+
+```ruby
+Npiregistry.get({first_name: 'LAURA'})
+
+OR
+
+Npiregistry.get({first_name: '*URA'}) 
+```
+
+Get details using last name and wildcard search
+```ruby
+Npiregistry.get({last_name: 'SAMPLE'})
+
+OR
+
+Npiregistry.get({last_name: 'SAM*'}) 
+```
+ 
+Use the following fields to generating valid response.
+
+
+| Fields         |  Description  |  
+| :------------- |:-------------|
+| number                |  Exactly 10 digits
+| enumeration_type      |  NPI-1 or NPI-2 (Other criteria required)    
+| taxonomy_description  |  Exact Description or Exact Specialty or wildcard * after 2 characters
+| first_name            |  Exact name, or wildcard * after 2 characters    Use for type 1
+| last_name             |  Exact name, or wildcard * after 2 characters    Use for type 1
+| organization_name     |  Exact name, or wildcard * after 2 characters    Use for type 2
+| address_purpose       |  LOCATION or MAILING (Other criteria required)
+| city                  |  Exact Name
+| state                 |  2 Characters (Other criteria required)
+| postal_code           |  At least 2 characters, wildcard is implied
+| country_code          |  Exactly 2 characters (if "US", other criteria required)
+| limit                 |  Limit results, default = 10, max = 200
+| skip                  |  Skip first N results, max = 1000
+
+
+
 
 ## Development
 

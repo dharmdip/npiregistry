@@ -15,7 +15,6 @@ module Npiregistry
 
     def initialize args
       @options = (args[:options] || {}).dup
-      @os_options = OpenStruct.new(@options)
       @url = URL
     end
 
@@ -25,7 +24,7 @@ module Npiregistry
     end
 
     def process_parameters
-      options = @os_options
+      options = OpenStruct.new(@options)
       {
         number: options.number,
         enumeration_type: options.enumeration_type,
