@@ -30,18 +30,22 @@ Get details using first name and wildcard search
 
 ```ruby
 Npiregistry.get({first_name: 'LAURA'})
+```
 
-OR
+or
 
+```ruby
 Npiregistry.get({first_name: '*URA'}) 
 ```
 
 Get details using last name and wildcard search
 ```ruby
 Npiregistry.get({last_name: 'SAMPLE'})
+```
 
-OR
+or
 
+```ruby
 Npiregistry.get({last_name: 'SAM*'}) 
 ```
  
