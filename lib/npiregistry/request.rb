@@ -43,7 +43,6 @@ module Npiregistry
     def make_request
       uri = URI URL
       uri.query = URI.encode_www_form process_parameters
-      uri.header = default_headers
       JSON.parse Net::HTTP.get_response(uri).body
     end
 
