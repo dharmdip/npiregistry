@@ -24,19 +24,20 @@ module Npiregistry
     def process_parameters
       options = OpenStruct.new(@options)
       {
-          number: options.number,
-          enumeration_type: options.enumeration_type,
-          taxonomy_description: options.taxonomy_description,
-          first_name: options.first_name,
-          last_name: options.last_name,
-          organization_name: options.organization_name,
-          address_purpose: options.address_purpose,
-          city: options.city,
-          state: options.state,
-          postal_code: options.postal_code,
-          country_code: options.country_code,
-          limit: options.limit,
-          skip: options.skip
+        number: options.number,
+        enumeration_type: options.enumeration_type,
+        taxonomy_description: options.taxonomy_description,
+        first_name: options.first_name,
+        last_name: options.last_name,
+        organization_name: options.organization_name,
+        address_purpose: options.address_purpose,
+        city: options.city,
+        state: options.state,
+        postal_code: options.postal_code,
+        country_code: options.country_code,
+        limit: options.limit,
+        skip: options.skip,
+        version: Npiregistry::VERSION
       }.delete_if { |key, val| val.nil? }
     end
 
@@ -48,8 +49,8 @@ module Npiregistry
 
     def default_headers
       {
-          :accept => '*/*',
-          :user_agent => "NpiregistryRubyGem/#{Npiregistry::VERSION}"
+        :accept => '*/*',
+        :user_agent => "NpiregistryRubyGem/#{Npiregistry::VERSION}"
       }
     end
 
