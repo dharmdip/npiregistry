@@ -1,3 +1,3 @@
 module Npiregistry
-  VERSION = "0.1.5"
+  VERSION = "2.1"
 end
